@@ -7,6 +7,13 @@ function global() {
   console.log(this);
 }
 global();
+
+// Strict Mode
+function global() {
+  console.log(`${this.name} says Hello!!`);
+  console.log(`${this.username} says Hi!!`);
+}
+global();
 */
 
 /*
@@ -18,6 +25,7 @@ function welcome(period) {
     ? console.log(`${this.name} says ${this.eveningHi}`)
     : console.log(`what kind of greeting do you want to say?!`);
 }
+welcome("morning");
 const person1 = {
   name: "Ahmed",
   morningHi: "good morning everyone!",
@@ -66,7 +74,7 @@ welcomeVar2();
 */
 
 /*
-// Callback Function
+// Callback Function && Arrow Function
 function callbackFunc1() {
   console.log(this);
   console.log("#####################################");
@@ -89,13 +97,12 @@ person.callbackFunc1();
 */
 
 /*
-function callbackFunc2(arr = []) {
+function callbackFunc2() {
   arr.map(function (e) {
     console.log(e);
     console.log(this);
   });
   console.log("##################################### \n".repeat(3));
-
   arr.map((e) => {
     console.log(e);
     console.log(this);
@@ -109,4 +116,19 @@ const person = {
   callbackFunc2,
 };
 person.callbackFunc2(arr);
+*/
+
+/*
+const btn1 = document.querySelector(".button1");
+const btn2 = document.querySelector(".button2");
+
+btn1.addEventListener("click", function () {
+  console.log("THIS IS:", this);
+  console.log("#####################################");
+});
+
+btn2.addEventListener("click", () => {
+  console.log("THIS IS:", this);
+  console.log("#####################################");
+});
 */
