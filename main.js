@@ -153,6 +153,8 @@ console.log(game2);
 game2.details();
 */
 
+/*
+// Classes
 class Game {
   constructor(gameName, gameVersion) {
     this.name = gameName;
@@ -173,3 +175,4 @@ class Game {
 const game1 = new Game("Fortnite", "Story Mood");
 console.log(game1);
 game1.details("High-performance PC");
+*/
