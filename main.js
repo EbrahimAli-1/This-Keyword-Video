@@ -132,3 +132,44 @@ btn2.addEventListener("click", () => {
   console.log("#####################################");
 });
 */
+
+/*
+// Constructon Function
+function Game(gameName, gameVersion) {
+  this.name = gameName;
+  this.version = gameVersion;
+  this.details = function () {
+    console.log(`This is:`, this);
+    console.log(`The game is ${this.name} and the version is ${this.version}`);
+  };
+}
+
+const game1 = new Game("COD", "V4");
+console.log(game1);
+game1.details();
+
+const game2 = new Game("Fortnite", "Story mode");
+console.log(game2);
+game2.details();
+*/
+
+class Game {
+  constructor(gameName, gameVersion) {
+    this.name = gameName;
+    this.version = gameVersion;
+  }
+
+  static checkGame() {
+    console.log(this);
+  }
+
+  details(requires) {
+    console.log(
+      `This game is ${this.name} and the virsion is ${this.version}, It requires ${requires}`
+    );
+  }
+}
+
+const game1 = new Game("Fortnite", "Story Mood");
+console.log(game1);
+game1.details("High-performance PC");
